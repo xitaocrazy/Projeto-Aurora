@@ -1,0 +1,10 @@
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.deps.json
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.runtimeconfig.json
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.runtimeconfig.dev.json
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.dll
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.pdb
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\obj\Debug\netcoreapp2.0\ProjetoAuroraApi.csproj.CoreCompileInputs.cache
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\obj\Debug\netcoreapp2.0\ProjetoAuroraApi.AssemblyInfoInputs.cache
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\obj\Debug\netcoreapp2.0\ProjetoAuroraApi.AssemblyInfo.cs
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\obj\Debug\netcoreapp2.0\ProjetoAuroraApi.dll
+d:\GitHub\Projeto-Aurora\ProjetoAuroraApi\obj\Debug\netcoreapp2.0\ProjetoAuroraApi.pdb
