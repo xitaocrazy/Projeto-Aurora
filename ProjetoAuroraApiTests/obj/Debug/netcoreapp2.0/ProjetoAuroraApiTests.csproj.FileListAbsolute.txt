@@ -1,0 +1,15 @@
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApiTests.deps.json
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApiTests.runtimeconfig.json
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApiTests.runtimeconfig.dev.json
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApiTests.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApiTests.pdb
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\bin\Debug\netcoreapp2.0\ProjetoAuroraApi.pdb
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\obj\Debug\netcoreapp2.0\ProjetoAuroraApiTests.csproj.CoreCompileInputs.cache
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\obj\Debug\netcoreapp2.0\ProjetoAuroraApiTests.AssemblyInfoInputs.cache
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\obj\Debug\netcoreapp2.0\ProjetoAuroraApiTests.AssemblyInfo.cs
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\obj\Debug\netcoreapp2.0\ProjetoAuroraApiTests.dll
+D:\GitHub\Projeto-Aurora\ProjetoAuroraApiTests\obj\Debug\netcoreapp2.0\ProjetoAuroraApiTests.pdb
