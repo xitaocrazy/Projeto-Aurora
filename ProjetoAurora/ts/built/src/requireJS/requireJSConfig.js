@@ -1,8 +1,8 @@
 require.config({
-    baseUrl: "/ProjetoAurora/js",
+    baseUrl: "./js/",
     paths: {
         text: "text"
     },
-    waitSeconds: 0
+    waitSeconds: 15
 });
 //# sourceMappingURL=requireJSConfig.js.map
