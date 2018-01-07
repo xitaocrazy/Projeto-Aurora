@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using ProjetoAuroraApi.Extensions;
 
 namespace ProjetoAuroraApi.Helpers {
     public static class ServiceToCaculatePointsHelper {
@@ -11,7 +12,7 @@ namespace ProjetoAuroraApi.Helpers {
         public static IEnumerable<int> GetValuesWithPairs(IEnumerable<int> values, bool onlyExacts = false) {
             var pairs = new List<int>();
             for (var i=1; i<=6; i++) {
-                bool hasPair = onlyExacts ? HasAPairOf(values, i) : HasAtLeastAPairOf(values, i);
+                bool hasPair = onlyExacts ? values.HasAPairOf(i) : values.HasAtLeastAPairOf(i);
                 if (hasPair) {
                     pairs.Add(i);
                 }
@@ -22,7 +23,7 @@ namespace ProjetoAuroraApi.Helpers {
         public static IEnumerable<int> GetValuesWithTrios(IEnumerable<int> values, bool onlyExacts = false) {
             var trios = new List<int>();
             for (var i=1; i<=6; i++) {
-                bool hasTrio = onlyExacts ? HasATrioOf(values, i) : HasAtLeastATrioOf(values, i);
+                bool hasTrio = onlyExacts ? values.HasATrioOf(i) : values.HasAtLeastATrioOf(i);
                 if (hasTrio) {
                     trios.Add(i);
                 }
@@ -30,35 +31,15 @@ namespace ProjetoAuroraApi.Helpers {
             return trios;
         }
 
-        public static IEnumerable<int> GetValuesWithFour(IEnumerable<int> values) {
+        public static IEnumerable<int> GetValuesWithFour(IEnumerable<int> values, bool onlyExacts = false) {
             var four = new List<int>();
             for (var i=1; i<=6; i++) {
-                bool hasTrio = HasAtLeastFourValuesOf(values, i);
+                bool hasTrio = onlyExacts ? values.HasFourValuesOf(i) : values.HasAtLeastFourValuesOf(i);
                 if (hasTrio) {
                     four.Add(i);
                 }
             }
             return four;
-        }
-
-        private static bool HasAtLeastAPairOf(IEnumerable<int> values, int i) {
-            return values.Where(v => v == i).Count() > 1;
-        }
-
-        private static bool HasAtLeastATrioOf(IEnumerable<int> values, int i) {
-            return values.Where(v => v == i).Count() > 2;
-        }
-
-        private static bool HasAtLeastFourValuesOf(IEnumerable<int> values, int i) {
-            return values.Where(v => v == i).Count() > 3;
-        }
-
-        private static bool HasAPairOf(IEnumerable<int> values, int i) {
-            return values.Where(v => v == i).Count() == 2;
-        }
-
-        private static bool HasATrioOf(IEnumerable<int> values, int i) {
-            return values.Where(v => v == i).Count() == 3;
         }
     }
 }
