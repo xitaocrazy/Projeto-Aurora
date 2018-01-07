@@ -1,0 +1,87 @@
+:root {
+    --color-body-bg: #000000;
+    --color-text: #b61111;
+    --color-text-highlighted: #fa0707;
+    --color-text-shadow: 2px 2px 12px #635a5a;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: var(--color-body-bg);
+    color: var(--color-text);
+    font-family: 'Exo 2', sans-serif;
+}
+
+header {
+    text-align: center;
+    font-weight: 600;
+    text-shadow: var(--color-text-shadow);
+    background-color: #ffffff;
+    min-height: 30vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.brand-header {
+    display: inline-block;
+    height: 120px;
+}
+
+main {
+    text-align: center;
+    min-height: 80vh;
+    height: auto !important;
+    height: 100vh;
+}
+
+section {
+    margin-top: 5vh;
+}
+
+span .text-highlighted {
+    color: var(--color-text-highlighted);
+}
+
+#scrolling .dice {
+    font-size: 16px;
+    text-align: center;
+}
+
+#scrolling .dice-img {
+    width: 36px;
+}
+
+#scrolling .wrapper-img-dice {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#scrolling .wrapper-img-dice img {
+    width: 36px;
+    height: 36px;
+}
+
+#scrolling .dice-value {
+    width: 36px;
+}
+
+footer {
+    background-color: #E4E0E0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #000000;
+    text-align: center;
+}
+
+.text{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+input[type="text"], input[type="email"] {
+    font-family: 'Lato', sans-serif;
+}

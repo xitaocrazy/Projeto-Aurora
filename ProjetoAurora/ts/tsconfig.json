@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "./built/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "amd",
+        "target": "es5"
+    },
+    "files": [
+        "./src/indexViewModel.ts",
+        "./specs/indexViewModelSpec.ts",
+        "./src/categoryViewModel.ts"
+    ]
+}

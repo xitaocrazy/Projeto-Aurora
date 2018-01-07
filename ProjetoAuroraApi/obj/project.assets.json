@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
+      "projectUniqueName": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
       "projectName": "ProjetoAuroraApi",
-      "projectPath": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
+      "projectPath": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
       "packagesPath": "C:\\Users\\daniel.martins\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\obj\\",
+      "outputPath": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
