@@ -34,10 +34,13 @@
 	<script src="js/jquery.1.12.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/knockout-3.4.2.js"></script> 
-    <script src="js/my.ko.js"></script>
-    <script src="ts/built/src/indexViewModel.js"></script>     
+    <script src="js/require.js"></script>
+    <script src="ts/built/src/requireJS/requireJSConfig.js"></script>  
+    <script src="ts/built/src/components/dices/DicesViewModel.js"></script>  
+    <script src="ts/built/src/viewModels/indexViewModel.js"></script>           
 </head>
 <body>
+
 <header>
     <div class="container-fluid">
         <div class="row">
@@ -50,89 +53,14 @@
 </header>
 
 <main>
-    <!-- Scrolling -->
-    <section id="scrolling">
-        <div class="container">        
-            <div class="row dices">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                    <div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2">
-                        <div class="dice">
-                            <div class="dice-img">
-                                <div class="wrapper-img-dice">
-                                    <img src="img/aurora.png">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="dado-um" name="dado-um" class="form-control dice-value" maxlength="1" required pattern="[1-6]{1}" data-bind="textInput: dice1">                
-                                </div>
-                            </div>                            
-                        </div>
-                    </div> 
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <div class="dice">
-                            <div class="dice-img">
-                                <div class="wrapper-img-dice">
-                                    <img src="img/aurora.png">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="dado-dois" name="dado-dois" class="form-control dice-value" maxlength="1" required pattern="[1-6]{1}" data-bind="textInput: dice2">                
-                                </div>
-                            </div>                            
-                        </div>
-                    </div> 
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <div class="dice">
-                            <div class="dice-img">
-                                <div class="wrapper-img-dice">
-                                    <img src="img/aurora.png">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="dado-tres" name="dado-tres" class="form-control dice-value" maxlength="1" required pattern="[1-6]{1}" data-bind="textInput: dice3">                
-                                </div>
-                            </div>                            
-                        </div>
-                    </div>     
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <div class="dice">
-                            <div class="dice-img">
-                                <div class="wrapper-img-dice">
-                                    <img src="img/aurora.png">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="dado-quatro" name="dado-quatro" class="form-control dice-value" maxlength="1" required pattern="[1-6]{1}" data-bind="textInput: dice4">                  
-                                </div>
-                            </div>                            
-                        </div>
-                    </div> 
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <div class="dice">
-                            <div class="dice-img">
-                                <div class="wrapper-img-dice">
-                                    <img src="img/aurora.png">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="dado-cinco" name="dado-cinco" class="form-control dice-value" maxlength="1" required pattern="[1-6]{1}" data-bind="textInput: dice5">                
-                                </div>
-                            </div>                            
-                        </div>
-                    </div>                                               
-                </div>                
-            </div>            
-        </div> 
-
-        <div class="row text">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-                <div class="col-xs-4 col-sm-4 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
-                    <button class="btn btn-lg btn-primary" data-bind="click:clean">Limpar</button>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
-                    <button class="btn btn-lg btn-primary" data-bind="click:randon">Rolar</button>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
-                    <button class="btn btn-lg btn-success">Enviar</button>
-                </div>                    
-            </div>                
-        </div> 
-    </section>     
+    <!-- ko ifnot: loaded -->
+    <section>
+        <button class="btn btn-lg btn-primary" data-bind="click:start">Iniciar o Jogo</button>
+    </section>
+    <!-- /ko -->
+    <!-- ko if: loaded -->     
+    <dices-component></dices-component> 
+    <!-- /ko --> 
 </main>
 
 <footer>

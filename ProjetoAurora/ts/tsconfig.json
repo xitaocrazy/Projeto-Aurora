@@ -3,12 +3,15 @@
         "outDir": "./built/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "amd",
+        "module": "AMD",
         "target": "es5"
     },
     "files": [
-        "./src/indexViewModel.ts",
-        "./specs/indexViewModelSpec.ts",
-        "./src/categoryViewModel.ts"
+        "./src/viewModels/indexViewModel.ts",        
+        "./src/components/dices/DicesViewModel.ts",
+        "./src/requireJS/requireJSConfig.ts",
+
+
+        "./specs/viewModels/indexViewModelSpec.ts"
     ]
 }
