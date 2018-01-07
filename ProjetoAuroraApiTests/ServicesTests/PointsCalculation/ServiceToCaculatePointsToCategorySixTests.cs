@@ -2,7 +2,7 @@ using ProjetoAuroraApi.Models;
 using ProjetoAuroraApi.Services.PointsCalculation;
 using Xunit;
 
-namespace ProjetoAuroraApiTests.ServicesTests {
+namespace ProjetoAuroraApiTests.ServicesTests.PointsCalculation {
     public class ServiceToCaculatePointsToCategorySixTests {
         [Theory]
         [InlineData(0, new [] {2,2,2,4,5})]
