@@ -7,11 +7,7 @@
         "target": "es5"
     },
     "files": [
-        "./src/viewModels/indexViewModel.ts",        
         "./src/components/dices/DicesViewModel.ts",
-        "./src/requireJS/requireJSConfig.ts",
-
-
-        "./specs/viewModels/indexViewModelSpec.ts"
+        "./src/requireJS/requireJSConfig.ts"
     ]
 }

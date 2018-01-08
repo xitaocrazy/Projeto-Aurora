@@ -33,12 +33,12 @@
 
 	<script src="js/jquery.1.12.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/knockout-3.4.2.js"></script> 
-    <script src="js/require.js"></script>
+    <script src="node_modules/knockout/build/output/knockout-latest.js"></script> 
+    <script src="node_modules/knockout-postbox/build/knockout-postbox.min.js"></script>
+    <script src="node_modules/requirejs/require.js"></script>
 
-    <script src="ts/built/src/requireJS/requireJSConfig.js"></script>  
-    <script src="ts/built/src/components/dices/DicesViewModel.js"></script>  
-    <script src="ts/built/src/viewModels/indexViewModel.js"></script>           
+    <script src="ts/built/requireJS/requireJSConfig.js"></script>  
+    <script src="ts/built/components/dices/DicesViewModel.js"></script>           
 </head>
 <body>
 
@@ -67,7 +67,6 @@
 </body>
 
 <script type="text/javascript">
-    var viewModel = new IndexViewModel();
-    ko.applyBindings(viewModel);
+    ko.applyBindings();
 </script>
 </html>
