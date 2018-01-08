@@ -1,7 +1,7 @@
 require.config({
-    baseUrl: "./js/",
+    baseUrl: "./node_modules/",
     paths: {
-        text: "text"
+        text: "requirejs-text/text"
     },
     waitSeconds: 15
 });

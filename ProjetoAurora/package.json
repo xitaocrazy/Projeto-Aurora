@@ -23,8 +23,8 @@
     "karma-typescript": "^3.0.8",
     "phantomjs": "^2.1.7",
     "requirejs": "^2.3.5",
+    "requirejs-text": "^2.0.15",
     "rjs": "^4.0.2",
-    "text": "requirejs/text",
     "typescript": "^2.5.3"
   }
 }
