@@ -1,16 +1,17 @@
 var KnockoutComponents;
 (function (KnockoutComponents) {
     var DicesViewModel = /** @class */ (function () {
-        function DicesViewModel() {
+        function DicesViewModel(params) {
+            this.params = params;
             this.setDefaultValues();
             this.setComputeds();
         }
         DicesViewModel.prototype.setDefaultValues = function () {
-            this.dice1 = ko.observable('');
-            this.dice2 = ko.observable('');
-            this.dice3 = ko.observable('');
-            this.dice4 = ko.observable('');
-            this.dice5 = ko.observable('');
+            this.dice1 = this.params.dice1;
+            this.dice2 = this.params.dice2;
+            this.dice3 = this.params.dice3;
+            this.dice4 = this.params.dice4;
+            this.dice5 = this.params.dice5;
         };
         DicesViewModel.prototype.setComputeds = function () {
             this.canSend = ko.computed(this.verifyIfCanSend, this, { disposeWhenNodeIsRemoved: true });
@@ -31,6 +32,9 @@ var KnockoutComponents;
                 this.dice3() != null &&
                 this.dice4() != null &&
                 this.dice5() != null;
+        };
+        DicesViewModel.prototype.send = function () {
+            ko.postbox.publish('aurora.send.data');
         };
         DicesViewModel.prototype.clean = function () {
             this.dice1('');

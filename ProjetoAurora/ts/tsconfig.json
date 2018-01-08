@@ -8,6 +8,8 @@
     },
     "files": [
         "./src/components/dices/DicesViewModel.ts",
-        "./src/requireJS/requireJSConfig.ts"
+        "./src/requireJS/requireJSConfig.ts",
+        "./src/viewModels/IndexViewModel.ts",
+        "./src/components/categories/CategoriesViewModel.ts"
     ]
 }

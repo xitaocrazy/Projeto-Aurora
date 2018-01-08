@@ -37,8 +37,10 @@
     <script src="node_modules/knockout-postbox/build/knockout-postbox.min.js"></script>
     <script src="node_modules/requirejs/require.js"></script>
 
+    <script src="ts/built/viewModels/IndexViewModel.js"></script> 
     <script src="ts/built/requireJS/requireJSConfig.js"></script>  
-    <script src="ts/built/components/dices/DicesViewModel.js"></script>           
+    <script src="ts/built/components/dices/DicesViewModel.js"></script>  
+    <script src="ts/built/components/categories/CategoriesViewModel.js"></script>         
 </head>
 <body>
 
@@ -54,7 +56,9 @@
 </header>
 
 <main>
-    <dices-component></dices-component>
+    <dices-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5"></dices-component>
+    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5"></categories-component>
+    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5"></categories-component>
 </main>
 
 <footer>
@@ -67,6 +71,7 @@
 </body>
 
 <script type="text/javascript">
-    ko.applyBindings();
+    var vm = new ViewModels.IndexViewModel();
+    ko.applyBindings(vm);
 </script>
 </html>

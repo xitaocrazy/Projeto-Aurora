@@ -7,17 +7,17 @@ module KnockoutComponents{
         dice5: KnockoutObservable<string>;
         canSend: KnockoutComputed<boolean>;
 
-        constructor() {
+        constructor(private params: any) {
              this.setDefaultValues();
              this.setComputeds();
         }
 
         private setDefaultValues(){
-            this.dice1 = ko.observable(''); 
-            this.dice2 = ko.observable('');
-            this.dice3 = ko.observable(''); 
-            this.dice4 = ko.observable('');
-            this.dice5 = ko.observable('');
+            this.dice1 = this.params.dice1; 
+            this.dice2 = this.params.dice2;
+            this.dice3 = this.params.dice3; 
+            this.dice4 = this.params.dice4;
+            this.dice5 = this.params.dice5;
         }
 
         private setComputeds(){
@@ -42,6 +42,10 @@ module KnockoutComponents{
                    this.dice3() != null &&
                    this.dice4() != null &&
                    this.dice5() != null;
+        }
+
+        send(){
+            ko.postbox.publish('aurora.send.data');
         }
 
         clean(){
