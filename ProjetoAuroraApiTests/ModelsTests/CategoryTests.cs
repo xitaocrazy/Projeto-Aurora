@@ -1,15 +1,15 @@
 using ProjetoAuroraApi.Models;
 using Xunit;
 
-namespace AvaliacaoDeCandidatosApi.Tests.ModelTests {
-    public class Candidatotests {
+namespace ProjetoAuroraApi.ModelTests {
+    public class CategoryTests {
         private Category _category1;
         private Category _category2;
         private Category _category3;
 
         [Fact]
         public void ToStringTest_de_retornar_o_valor_esperado() {
-            CreateCandidatos();
+            CreateCategories();
             var Rule = "Haver pelo menos 1 dado com valor 1 no rolamento.";
             var Calculation = "Soma de todos os dados de valor 1.";
             var esperado = $"Id: 1 - Name: Um - Rule: {Rule} - Calculation: {Calculation} - Points: 2";
@@ -21,63 +21,63 @@ namespace AvaliacaoDeCandidatosApi.Tests.ModelTests {
 
         [Fact]
         public void EqualsMethodTest_deve_indicar_que_os_objetos_sao_iguais() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.True(_category1.Equals(_category2));
         }
 
         [Fact]
         public void EqualsMethodTest_deve_indicar_que_os_objetos_sao_diferentes() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.False(_category1.Equals(_category3));
         }
 
         [Fact]
         public void ObjectEqualsTest_deve_indicar_que_os_objetos_sao_iguais() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.True(Equals(_category1, _category2));
         }
 
         [Fact]
         public void ObjectEqualsTest_deve_indicar_que_os_objetos_sao_diferentes() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.False(Equals(_category1, _category3));
         }
 
         [Fact]
         public void EqualsOperatorTest_deve_indicar_que_os_objetos_sao_iguais() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.True(_category1 == _category2);
         }
 
         [Fact]
         public void EqualsOperatorTest_deve_indicar_que_os_objetos_sao_diferentes() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.False(_category1 == _category3);
         }
 
         [Fact]
         public void NotEqualsOperatorTest_deve_indicar_que_os_objetos_nao_sao_diferentes() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.False(_category1 != _category2);
         }
 
         [Fact]
         public void NotEqualsOperatorTest_deve_indicar_que_os_objetos_sao_diferentes() {
-            CreateCandidatos();
+            CreateCategories();
 
             Assert.True(_category1 != _category3);
         }
 
         [Fact]
         public void GetHashCodeTest_deve_retornar_o_valor_esperado() {
-            CreateCandidatos();
+            CreateCategories();
             
             var esperado = GetHashCode(_category1);
 
@@ -97,7 +97,7 @@ namespace AvaliacaoDeCandidatosApi.Tests.ModelTests {
             }
         }
 
-        private void CreateCandidatos(){
+        private void CreateCategories(){
             _category1 = new Category{
                 Id = 1,   
                 Name= "Um",        

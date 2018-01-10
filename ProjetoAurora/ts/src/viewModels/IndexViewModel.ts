@@ -11,11 +11,11 @@ module ViewModels{
         }
 
        private setDefaultValues(){
-            this.dice1 = ko.observable(''); 
-            this.dice2 = ko.observable('');
-            this.dice3 = ko.observable(''); 
-            this.dice4 = ko.observable('');
-            this.dice5 = ko.observable('');
+            this.dice1 = ko.observable<string>(''); 
+            this.dice2 = ko.observable<string>('');
+            this.dice3 = ko.observable<string>(''); 
+            this.dice4 = ko.observable<string>('');
+            this.dice5 = ko.observable<string>('');
         }
     }    
 }

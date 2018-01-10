@@ -12534,30 +12534,32 @@
   },
   "packageFolders": {
     "C:\\Users\\daniel.martins\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
+      "projectUniqueName": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
       "projectName": "ProjetoAuroraApi",
-      "projectPath": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
+      "projectPath": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\ProjetoAuroraApi.csproj",
       "packagesPath": "C:\\Users\\daniel.martins\\.nuget\\packages\\",
-      "outputPath": "d:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\obj\\",
+      "outputPath": "D:\\GitHub\\Projeto-Aurora\\ProjetoAuroraApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\daniel.martins\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://way2buildcontinuo.brazilsouth.cloudapp.azure.com/httpAuth/app/nuget/v1/FeedService.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12574,14 +12576,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [

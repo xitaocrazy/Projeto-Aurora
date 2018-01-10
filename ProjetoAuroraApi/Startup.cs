@@ -18,10 +18,10 @@ namespace ProjetoAuroraApi {
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddTransient<IServiceToCaculatePointsFactory, ServiceToCaculatePointsFactory>();
-
+            services.AddSingleton<IConfiguration>(c => Configuration);
+            
             services.AddCors(options => {
                 options.AddPolicy("AllowAllOrigins",
                     builder => {
@@ -34,14 +34,12 @@ namespace ProjetoAuroraApi {
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
-            if (env.IsDevelopment())
-            {
+            if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseMvc();
+            app.UseCors("AllowAllOrigins");
+            app.UseMvc();            
         }
     }
 }
