@@ -6,10 +6,14 @@
         "module": "AMD",
         "target": "es5"
     },
-    "files": [
-        "./src/components/dices/DicesViewModel.ts",
+    "files": [        
         "./src/requireJS/requireJSConfig.ts",
+
+        "./src/components/dices/DicesViewModel.ts",
+        "./src/components/categories/CategoriesViewModel.ts",
+
         "./src/viewModels/IndexViewModel.ts",
-        "./src/components/categories/CategoriesViewModel.ts"
+        
+        "./src/models/Category.ts"
     ]
 }
