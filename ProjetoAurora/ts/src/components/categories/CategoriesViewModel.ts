@@ -5,7 +5,7 @@ module KnockoutComponents{
         dice3: KnockoutObservable<string>;
         dice4: KnockoutObservable<string>;
         dice5: KnockoutObservable<string>;        
-        category: KnockoutObservable<Models.Category>;
+        category: Models.Category;
         style: KnockoutComputed<string>;
         isOk: KnockoutComputed<boolean>;
 
@@ -83,7 +83,7 @@ module KnockoutComponents{
         }
 
         private calculationSuccess = (result: any) => {
-            console.log(result);
+            //console.log(result);
             this.setCategoryData(result);
         }
 
@@ -95,8 +95,8 @@ module KnockoutComponents{
         }
 
         private calculationError = (request: any, message: any, error: any) => {
-            console.log('Ops. Algo errado não está certo. Tente novamente'); 
-            console.log(message + '. Erro: ' + error); 
+            //console.log('Ops. Algo errado não está certo. Tente novamente'); 
+            //console.log(message + '. Erro: ' + error); 
             this.clearCategoryData();          
         } 
 

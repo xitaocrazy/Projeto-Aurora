@@ -3,6 +3,9 @@ describe('With an IndexViewModel', function () {
     beforeEach(function () {
         vm = new ViewModels.IndexViewModel();
     });
+    afterEach(function () {
+        ko.postbox.reset();
+    });
     describe('when build the object', function () {
         it('shloud set "dice1" as expected', function () {
             expect(vm.dice1()).toEqual('');

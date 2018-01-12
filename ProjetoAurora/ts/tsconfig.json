@@ -16,6 +16,7 @@
 
         "./specs/modelsSpecs/CategorySpecs.ts",
         "./specs/viewModelsSpecs/IndexViewModelSpecs.ts",
-        "./specs/componentsSpecs/dicesSpecs/DicesViewModelSpecs.ts"
+        "./specs/componentsSpecs/dicesSpecs/DicesViewModelSpecs.ts",
+        "./specs/componentsSpecs/categoriesSpecs/CategoriesViewModelSpecs.ts"
     ]
 }

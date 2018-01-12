@@ -6,12 +6,12 @@ var KnockoutComponents;
             this.params = params;
             this.url = 'http://localhost:5000/api/categories';
             this.calculationSuccess = function (result) {
-                console.log(result);
+                //console.log(result);
                 _this.setCategoryData(result);
             };
             this.calculationError = function (request, message, error) {
-                console.log('Ops. Algo errado não está certo. Tente novamente');
-                console.log(message + '. Erro: ' + error);
+                //console.log('Ops. Algo errado não está certo. Tente novamente'); 
+                //console.log(message + '. Erro: ' + error); 
                 _this.clearCategoryData();
             };
             this.setDefaultValues();

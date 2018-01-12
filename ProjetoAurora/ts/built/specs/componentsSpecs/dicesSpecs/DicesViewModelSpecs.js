@@ -20,6 +20,9 @@ describe('With an DicesViewModel', function () {
         };
         vm = new KnockoutComponents.DicesViewModel(params);
     });
+    afterEach(function () {
+        ko.postbox.reset();
+    });
     describe('when build the object', function () {
         it('shloud set "dice1" as expected', function () {
             expect(vm.dice1()).toEqual(dice1());

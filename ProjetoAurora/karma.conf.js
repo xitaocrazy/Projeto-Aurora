@@ -28,8 +28,8 @@ module.exports = function(config) {
 
       {pattern: 'ts/built/specs/modelsSpecs/*.js', included: true},
       {pattern: 'ts/built/specs/viewModelsSpecs/*.js', included: true},
-      {pattern: 'ts/built/specs/componentsSpecs/dicesSpecs/*.js', included: true}
-      //{pattern: 'ts/built/specs/componentsSpecs/categoriesSpecs/*.js', included: true}
+      {pattern: 'ts/built/specs/componentsSpecs/dicesSpecs/*.js', included: true},
+      {pattern: 'ts/built/specs/componentsSpecs/categoriesSpecs/*.js', included: true}
     ],
 
 
