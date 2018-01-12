@@ -3,27 +3,38 @@ var ViewModels;
     var IndexViewModel = /** @class */ (function () {
         function IndexViewModel() {
             this.setDefaultValues();
+            this.setComputeds();
         }
         IndexViewModel.prototype.setDefaultValues = function () {
+            this.setDices();
+            this.setCategories();
+        };
+        IndexViewModel.prototype.setComputeds = function () {
+            ko.computed(this.sortCategories, this, { disposeWhenNodeIsRemoved: true });
+        };
+        IndexViewModel.prototype.setDices = function () {
             this.dice1 = ko.observable('');
             this.dice2 = ko.observable('');
             this.dice3 = ko.observable('');
             this.dice4 = ko.observable('');
             this.dice5 = ko.observable('');
-            this.category1 = ko.observable(new Models.Category(1));
-            this.category2 = ko.observable(new Models.Category(2));
-            this.category3 = ko.observable(new Models.Category(3));
-            this.category4 = ko.observable(new Models.Category(4));
-            this.category5 = ko.observable(new Models.Category(5));
-            this.category6 = ko.observable(new Models.Category(6));
-            this.category7 = ko.observable(new Models.Category(7));
-            this.category8 = ko.observable(new Models.Category(8));
-            this.category9 = ko.observable(new Models.Category(9));
-            this.category10 = ko.observable(new Models.Category(10));
-            this.category11 = ko.observable(new Models.Category(11));
-            this.category12 = ko.observable(new Models.Category(12));
-            this.category13 = ko.observable(new Models.Category(13));
-            this.category14 = ko.observable(new Models.Category(14));
+        };
+        IndexViewModel.prototype.setCategories = function () {
+            this.categories = ko.observableArray([]);
+            for (var i = 1; i < 15; i++) {
+                this.categories.push(new Models.Category(i));
+            }
+        };
+        IndexViewModel.prototype.sortCategories = function () {
+            ko.utils.arrayForEach(this.categories(), function (categorie) {
+                categorie.isBestOption(false);
+            });
+            this.categories.sort(function (l, r) {
+                return l.points() === r.points()
+                    ? l.points() < r.points() ? 1 : -1
+                    : l.points() < r.points() ? 1 : -1;
+            });
+            this.categories()[0].isBestOption(true);
         };
         return IndexViewModel;
     }());

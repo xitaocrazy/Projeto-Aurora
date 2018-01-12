@@ -46,26 +46,26 @@ span .text-highlighted {
     color: var(--color-text-highlighted);
 }
 
-#scrolling .dice {
+#dices .dice {
     font-size: 16px;
     text-align: center;
 }
 
-#scrolling .dice-img {
+#dices .dice-img {
     width: 36px;
 }
 
-#scrolling .wrapper-img-dice {
+#dices .wrapper-img-dice {
     display: inline-block;
     padding-bottom: 10px;
 }
 
-#scrolling .wrapper-img-dice img {
+#dices .wrapper-img-dice img {
     width: 36px;
     height: 36px;
 }
 
-#scrolling .dice-value {
+#dices .dice-value {
     width: 36px;
 }
 

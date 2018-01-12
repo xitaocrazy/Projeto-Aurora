@@ -5,6 +5,7 @@ module Models{
         rule: KnockoutObservable<string>;
         calculation: KnockoutObservable<string>;
         points: KnockoutObservable<number>;
+        isBestOption: KnockoutObservable<boolean>;
 
         constructor(id: number) {
             this.setDefaultValues(id);
@@ -16,6 +17,7 @@ module Models{
             this.rule = ko.observable<string>(''); 
             this.calculation = ko.observable<string>('');
             this.points = ko.observable<number>(0);
+            this.isBestOption = ko.observable(false);
         }
     }    
 }

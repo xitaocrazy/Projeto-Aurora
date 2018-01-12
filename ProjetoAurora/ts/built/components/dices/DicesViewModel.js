@@ -36,12 +36,13 @@ var KnockoutComponents;
         DicesViewModel.prototype.send = function () {
             ko.postbox.publish('aurora.send.data');
         };
-        DicesViewModel.prototype.clean = function () {
+        DicesViewModel.prototype.clear = function () {
             this.dice1('');
             this.dice2('');
             this.dice3('');
             this.dice4('');
             this.dice5('');
+            ko.postbox.publish('aurora.clear.data');
         };
         DicesViewModel.prototype.randon = function () {
             this.dice1(this.getRandomIntIncludingLimits(1, 6) + '');
@@ -59,8 +60,8 @@ var KnockoutComponents;
     }());
     KnockoutComponents.DicesViewModel = DicesViewModel;
 })(KnockoutComponents || (KnockoutComponents = {}));
-ko.components.register("dices-component", {
+ko.components.register('dices-component', {
     viewModel: KnockoutComponents.DicesViewModel,
-    template: { require: "text!../ts/src/components/dices/DicesViewModel.html" }
+    template: { require: 'text!../ts/src/components/dices/DicesViewModel.html' }
 });
 //# sourceMappingURL=DicesViewModel.js.map

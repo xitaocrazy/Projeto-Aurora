@@ -48,12 +48,13 @@ module KnockoutComponents{
             ko.postbox.publish('aurora.send.data');
         }
 
-        clean(){
+        clear(){
             this.dice1('');
             this.dice2('');
             this.dice3('');
             this.dice4('');
             this.dice5('');
+            ko.postbox.publish('aurora.clear.data');
         }
 
         randon(){
@@ -72,7 +73,7 @@ module KnockoutComponents{
     }
 }
 
-ko.components.register("dices-component", {
+ko.components.register('dices-component', {
     viewModel: KnockoutComponents.DicesViewModel,
-    template: { require: "text!../ts/src/components/dices/DicesViewModel.html" }
+    template: { require: 'text!../ts/src/components/dices/DicesViewModel.html' }
 });

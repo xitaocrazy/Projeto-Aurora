@@ -12,18 +12,21 @@
 
     <meta name="description" content="Role os dados e escolha a melhor opção!!" />
 
+    <!-- Facebook Open Graph -->
     <meta property="og:url" content="index.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Projeto Aurora" />
     <meta property="og:description" content="Role os dados e escolha a melhor opção!!" />
     <meta property="og:image" content="img/aurora_head.png" />
 
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="index.html">
     <meta name="twitter:title" content="Projeto Aurora">
     <meta name="twitter:description" content="Role os dados e escolha a melhor opção!!">
     <meta name="twitter:image" content="img/aurora_head.png">
 
+    <!-- Styles inclusion -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/app.css">
@@ -31,11 +34,14 @@
     <!-- Fonts inclusion -->
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i,600,600i|Lato:400,400i" rel="stylesheet">
 
+    <!-- Scripts inclusion -->
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/knockout/build/output/knockout-latest.js"></script> 
     <script src="node_modules/knockout-postbox/build/knockout-postbox.min.js"></script>
     <script src="node_modules/requirejs/require.js"></script>
+
+    <script src="js/my.ko.js"></script> 
 
     <script src="ts/built/viewModels/IndexViewModel.js"></script> 
     <script src="ts/built/requireJS/requireJSConfig.js"></script>  
@@ -43,8 +49,8 @@
     <script src="ts/built/components/categories/CategoriesViewModel.js"></script>  
     <script src="ts/built/models/Category.js"></script>       
 </head>
-<body>
 
+<body>
 <header>
     <div class="container-fluid">
         <div class="row">
@@ -57,21 +63,14 @@
 </header>
 
 <main>
-    <dices-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5"></dices-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category1"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category2"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category3"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category4"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category5"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category6"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category7"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category8"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category9"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category10"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category11"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category12"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category13"></categories-component>
-    <categories-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5, category: category14"></categories-component>
+    <section id="dices">
+        <dices-component params="dice1: dice1, dice2: dice2, dice3: dice3, dice4: dice4, dice5: dice5"></dices-component>
+    </section>
+    <section id="categories">
+        <div data-bind="foreach: { data: categories, as: 'category' }">
+            <categories-component params="dice1: $root.dice1, dice2: $root.dice2, dice3: $root.dice3, dice4: $root.dice4, dice5: $root.dice5, category: category"></categories-component>
+        </div>
+    </section>
 </main>
 
 <footer>
@@ -80,7 +79,6 @@
         <p>Todos os direitos reservados. Janeiro, 2018.</p>
     </div>
 </footer>
-
 </body>
 
 <script type="text/javascript">

@@ -10,6 +10,7 @@ var Models;
             this.rule = ko.observable('');
             this.calculation = ko.observable('');
             this.points = ko.observable(0);
+            this.isBestOption = ko.observable(false);
         };
         return Category;
     }());
