@@ -8,15 +8,14 @@
     },
     "files": [        
         "./src/requireJS/requireJSConfig.ts",
-
-        "./src/components/dices/DicesViewModel.ts",
-        "./src/components/categories/CategoriesViewModel.ts",
-
-        "./src/viewModels/IndexViewModel.ts",
-        
         "./src/models/Category.ts",
+        "./src/viewModels/IndexViewModel.ts",
+        "./src/components/dices/DicesViewModel.ts",
+        "./src/components/categories/CategoriesViewModel.ts",                
+        
 
         "./specs/modelsSpecs/CategorySpecs.ts",
-        "./specs/viewModelsSpecs/IndexViewModelSpecs.ts"
+        "./specs/viewModelsSpecs/IndexViewModelSpecs.ts",
+        "./specs/componentsSpecs/dicesSpecs/DicesViewModelSpecs.ts"
     ]
 }

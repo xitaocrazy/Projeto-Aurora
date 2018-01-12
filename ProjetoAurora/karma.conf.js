@@ -17,14 +17,19 @@ module.exports = function(config) {
     files: [
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/knockout/build/output/knockout-latest.js',
+      'node_modules/knockout-postbox/build/knockout-postbox.min.js',
 
       {pattern: 'js/*.js', included: true},
 
       {pattern: 'ts/built/src/models/*.js', included: true},
       {pattern: 'ts/built/src/viewModels/*.js', included: true},
+      {pattern: 'ts/built/src/components/dices/*.js', included: true},
+      {pattern: 'ts/built/src/components/categories/*.js', included: true},
 
       {pattern: 'ts/built/specs/modelsSpecs/*.js', included: true},
-      {pattern: 'ts/built/specs/viewModelsSpecs/*.js', included: true}
+      {pattern: 'ts/built/specs/viewModelsSpecs/*.js', included: true},
+      {pattern: 'ts/built/specs/componentsSpecs/dicesSpecs/*.js', included: true}
+      //{pattern: 'ts/built/specs/componentsSpecs/categoriesSpecs/*.js', included: true}
     ],
 
 
