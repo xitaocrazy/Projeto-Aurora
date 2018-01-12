@@ -5,12 +5,12 @@ var ViewModels;
             this.setDefaultValues();
             this.setComputeds();
         }
-        IndexViewModel.prototype.setDefaultValues = function () {
-            this.setDices();
-            this.setCategories();
-        };
         IndexViewModel.prototype.setComputeds = function () {
             ko.computed(this.sortCategories, this, { disposeWhenNodeIsRemoved: true });
+        };
+        IndexViewModel.prototype.setDefaultValues = function () {
+            this.setCategories();
+            this.setDices();
         };
         IndexViewModel.prototype.setDices = function () {
             this.dice1 = ko.observable('');
@@ -26,8 +26,8 @@ var ViewModels;
             }
         };
         IndexViewModel.prototype.sortCategories = function () {
-            ko.utils.arrayForEach(this.categories(), function (categorie) {
-                categorie.isBestOption(false);
+            ko.utils.arrayForEach(this.categories(), function (category) {
+                category.isBestOption(false);
             });
             this.categories.sort(function (l, r) {
                 return l.points() === r.points()

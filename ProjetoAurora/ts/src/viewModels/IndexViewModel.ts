@@ -17,8 +17,8 @@ module ViewModels{
         }
 
         private setDefaultValues() {
-            this.setDices();
             this.setCategories();
+            this.setDices();            
         }
 
         private setDices() {
@@ -37,8 +37,8 @@ module ViewModels{
         }
 
         private sortCategories() {
-            ko.utils.arrayForEach(this.categories(), function(categorie) {
-                categorie.isBestOption(false);
+            ko.utils.arrayForEach(this.categories(), function(category) {
+                category.isBestOption(false);
             });
         
             this.categories.sort( (l, r) => {

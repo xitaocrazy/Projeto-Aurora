@@ -14,6 +14,9 @@
 
         "./src/viewModels/IndexViewModel.ts",
         
-        "./src/models/Category.ts"
+        "./src/models/Category.ts",
+
+        "./specs/modelsSpecs/CategorySpecs.ts",
+        "./specs/viewModelsSpecs/IndexViewModelSpecs.ts"
     ]
 }

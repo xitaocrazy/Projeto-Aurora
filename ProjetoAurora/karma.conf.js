@@ -15,11 +15,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'js/jquery.1.12.4.min.js',
-      'js/knockout-3.4.2.debug.js',
-      {pattern: 'js/*.js', included: true},      
-      {pattern: 'js/main.js', included: true},
-      {pattern: 'ts/built/**/*.js', included: true}
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/knockout/build/output/knockout-latest.js',
+
+      {pattern: 'js/*.js', included: true},
+
+      {pattern: 'ts/built/src/models/*.js', included: true},
+      {pattern: 'ts/built/specs/modelsSpecs/*.js', included: true},
+      
+      {pattern: 'ts/built/src/viewModels/*.js', included: true},
+      {pattern: 'ts/built/specs/viewModelsSpecs/*.js', included: true}
     ],
 
 
