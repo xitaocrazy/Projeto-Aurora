@@ -21,9 +21,9 @@ module.exports = function(config) {
       {pattern: 'js/*.js', included: true},
 
       {pattern: 'ts/built/src/models/*.js', included: true},
-      {pattern: 'ts/built/specs/modelsSpecs/*.js', included: true},
-      
       {pattern: 'ts/built/src/viewModels/*.js', included: true},
+
+      {pattern: 'ts/built/specs/modelsSpecs/*.js', included: true},
       {pattern: 'ts/built/specs/viewModelsSpecs/*.js', included: true}
     ],
 

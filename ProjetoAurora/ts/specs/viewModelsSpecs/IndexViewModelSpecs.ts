@@ -20,29 +20,45 @@ describe('With an IndexViewModel', () => {
             expect(vm.dice1()).toEqual('');
         });
         it('should set "categories" as expected', () => {
-            for (let i = 0; i < 15; i++) {
-                ValidateCategory(vm.categories()[0], i+1);
+            for (let i = 0; i < 14; i++) {
+                ValidateCategory(vm.categories()[i], i+1, 0);
+            }
+        });        
+    });
+    describe('when set the points to categories', () => {
+        beforeEach(() => {
+            for (var i=1; i<15; i++){
+                var category = ko.utils.arrayFirst(vm.categories(), function(category) {
+                    return category.id() == i;
+                });
+                category.points(i);
             }
         });
-        function ValidateCategory(category: Models.Category, id: number) {
-            it('shloud set "id" as expected', () => {
-                expect(category.id()).toEqual(1);
-            });
-            it('shloud set "name" as expected', () => {
-                expect(category.name()).toEqual('');
-            });
-            it('shloud set "rule" as expected', () => {
-                expect(category.rule()).toEqual('');
-            });
-            it('shloud set "calculation" as expected', () => {
-                expect(category.calculation()).toEqual('');
-            });
-            it('shloud set "points" as expected', () => {
-                expect(category.points()).toEqual(0);
-            });
-            it('shloud set "isBestOption" as expected', () => {
-                expect(category.isBestOption()).toBeFalsy();
-            });
-        };
+        it('should sort "categories" as expected', () => {
+            for (let i = 0; i < 14; i++) {
+                var value = 15 - (i+1);
+                ValidateCategory(vm.categories()[i], 14, 14);
+            }
+        });
     });
 });
+function ValidateCategory(category: Models.Category, id: number, points: number) {
+    it('shloud set "id" as expected', () => {
+        expect(category.id()).toEqual(id);
+    });
+    it('shloud set "name" as expected', () => {
+        expect(category.name()).toEqual('');
+    });
+    it('shloud set "rule" as expected', () => {
+        expect(category.rule()).toEqual('');
+    });
+    it('shloud set "calculation" as expected', () => {
+        expect(category.calculation()).toEqual('');
+    });
+    it('shloud set "points" as expected', () => {
+        expect(category.points()).toEqual(points);
+    });
+    it('shloud set "isBestOption" as expected', () => {
+        expect(category.isBestOption()).toBeFalsy();
+    });
+};

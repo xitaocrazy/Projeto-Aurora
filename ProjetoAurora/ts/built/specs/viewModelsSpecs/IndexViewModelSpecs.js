@@ -20,31 +20,47 @@ describe('With an IndexViewModel', function () {
             expect(vm.dice1()).toEqual('');
         });
         it('should set "categories" as expected', function () {
-            for (var i = 0; i < 15; i++) {
-                ValidateCategory(vm.categories()[0], i + 1);
+            for (var i = 0; i < 14; i++) {
+                ValidateCategory(vm.categories()[i], i + 1, 0);
             }
         });
-        function ValidateCategory(category, id) {
-            it('shloud set "id" as expected', function () {
-                expect(category.id()).toEqual(1);
-            });
-            it('shloud set "name" as expected', function () {
-                expect(category.name()).toEqual('');
-            });
-            it('shloud set "rule" as expected', function () {
-                expect(category.rule()).toEqual('');
-            });
-            it('shloud set "calculation" as expected', function () {
-                expect(category.calculation()).toEqual('');
-            });
-            it('shloud set "points" as expected', function () {
-                expect(category.points()).toEqual(0);
-            });
-            it('shloud set "isBestOption" as expected', function () {
-                expect(category.isBestOption()).toBeFalsy();
-            });
-        }
-        ;
+    });
+    describe('when set the points to categories', function () {
+        beforeEach(function () {
+            for (var i = 1; i < 15; i++) {
+                var category = ko.utils.arrayFirst(vm.categories(), function (category) {
+                    return category.id() == i;
+                });
+                category.points(i);
+            }
+        });
+        it('should sort "categories" as expected', function () {
+            for (var i = 0; i < 14; i++) {
+                var value = 15 - (i + 1);
+                ValidateCategory(vm.categories()[i], 14, 14);
+            }
+        });
     });
 });
+function ValidateCategory(category, id, points) {
+    it('shloud set "id" as expected', function () {
+        expect(category.id()).toEqual(id);
+    });
+    it('shloud set "name" as expected', function () {
+        expect(category.name()).toEqual('');
+    });
+    it('shloud set "rule" as expected', function () {
+        expect(category.rule()).toEqual('');
+    });
+    it('shloud set "calculation" as expected', function () {
+        expect(category.calculation()).toEqual('');
+    });
+    it('shloud set "points" as expected', function () {
+        expect(category.points()).toEqual(points);
+    });
+    it('shloud set "isBestOption" as expected', function () {
+        expect(category.isBestOption()).toBeFalsy();
+    });
+}
+;
 //# sourceMappingURL=IndexViewModelSpecs.js.map
